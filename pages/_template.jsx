@@ -1,4 +1,5 @@
 import React from 'react'
+import Radium, { StyleRoot } from 'Radium';
 
 module.exports = React.createClass({
   propTypes () {
@@ -8,6 +9,10 @@ module.exports = React.createClass({
   },
 
   render () {
-    return this.props.children
+    return (
+      <StyleRoot>
+        {this.props.children}
+      </StyleRoot>
+    )
   },
 })
