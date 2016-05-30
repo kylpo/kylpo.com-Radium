@@ -55,7 +55,7 @@ class Main extends React.Component {
             <Spacer />
 
             <p style={{textAlign: 'center', margin: '0 20px'}}>
-              <b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native)
+              <b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native) at <a href='http://www.instrument.com/' style={styles.textLink}>Instrument</a>
             </p>
 
           </div>
@@ -66,20 +66,26 @@ class Main extends React.Component {
   }
 }
 
-var fadeIn = Radium.keyframes({
+const fadeIn = Radium.keyframes({
   '0%': {opacity: 1, backgroundColor: 'black', visibility: 'visible'},
   '100%': {opacity: 0},
 }, 'fadeIn')
 
-var styles = {
+const styles = {
+  textLink: {
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    color: '#111',
+  },
   container: {
     display: 'flex',
-    height: '100vh',
+    minHeight: '100vh',
     flexDirection: 'column',
     alignContent: 'center',
     alignItems: 'center',
     justifyContent: 'center',
-    margin: '0 auto',
+    padding: '20px 0',
+    border: '8px solid #111',
   },
   fade: {
     position: 'fixed',
@@ -90,7 +96,7 @@ var styles = {
     visibility: 'hidden',
     pointerEvents: 'none',
     // Use a placeholder animation name in `animation`
-    animation: 'x 4s ease',
+    animation: 'x 3s ease',
     // Assign the result of `keyframes` to `animationName`
     animationName: fadeIn,
   },
