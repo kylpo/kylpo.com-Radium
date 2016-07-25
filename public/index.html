@@ -1,115 +1,47 @@
-<!DOCTYPE html>
- <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1.0"/><title>kylpo.com</title><link rel="shortcut icon"/><style id="typography.js">/*! normalize.css v3.0.2 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+<!DOCTYPE html><html><head><title>Site Title</title><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/><meta http-equiv="content-type" content="text/html; charset=utf-8"/><style>
+  /* box-sizing reset */
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  html {
+    box-sizing: border-box;
+  }
 
-html {
-  box-sizing: border-box;
-  font-size: 112.5%;
-  line-height: 1.5em;
-  overflow-y: scroll;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body {
-  color: hsl(0,0%,20%);
-  font-family: georgia, serif;
-  font-weight: 300;
-  word-wrap: break-word;
-}
-
-/* Make image responsive by default */
-img {
-  max-width: 100%;
-}
-
-h1,h2,h3,h4,h5,h6,hgroup,ul,ol,dl,dd,p,figure,pre,table,fieldset,blockquote,form,noscript,iframe,img,hr {
-margin: 0;
-margin-bottom: 1.5rem;
+  /* anti-aliasing */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+</style></head><body><div id="app"><div><style>html{font-family: sans-serif;
+-ms-text-size-adjust: 100%;
+-webkit-text-size-adjust: 100%;}body{margin: 0;}article, aside, details,  figcaption, figure, footer, header, main,  menu, nav, section, summary{display: block;}audio, canvas, progress, video{display: inline-block;}audio:not([controls]){display: none;
+height: 0;}progress{vertical-align: baseline;}template,  [hidden]{display: none;}a{background-color: transparent;
+-webkit-text-decoration-skip: objects;}a:active, a:hover{outline-width: 0;}abbr[title]{border-bottom: none;
+text-decoration: underline dotted;}b, strong{font-weight: bolder;}dfn{font-style: italic;}h1{font-size: 2em;
+margin: 0.67em 0;}mark{background-color: #ff0;
+color: #000;}small{font-size: 80%;}sub, sup{font-size: 75%;
+line-height: 0;
+position: relative;
+vertical-align: baseline;}sub{bottom: -0.25em;}sup{top: -0.5em;}img{border-style: none;}svg:not(:root){overflow: hidden;}code, kbd, pre, samp{font-family: monospace, monospace;
+font-size: 1em;}figure{margin: 1em 40px;}hr{box-sizing: content-box;
+height: 0;
+overflow: visible;}button, input, select, textarea{font: inherit;
+margin: 0;}optgroup{font-weight: bold;}button, input{overflow: visible;}button, select{text-transform: none;}button, html [type="button"],  [type="reset"], [type="submit"]{-webkit-appearance: button;}button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner{border-style: none;
+padding: 0;}button:-moz-focusring, [type="button"]:-moz-focusring, [type="reset"]:-moz-focusring, [type="submit"]:-moz-focusring{outline: 1px dotted ButtonText;}fieldset{border: 1px solid #c0c0c0;
+margin: 0 2px;
+padding: 0.35em 0.625em 0.75em;}legend{box-sizing: border-box;
+color: inherit;
+display: table;
+max-width: 100%;
 padding: 0;
-}
-
-blockquote {
-margin: 1.5rem 3.75rem;
-}
-
-b,strong {
-font-weight: 600
-}
-
-hr {
-background: hsl(0,0%,80%);
-border: none;
-height: 1px;
-margin-bottom: calc(1.5rem - 1px);
-}
-
-ol,ul {
-list-style-position: outside;
-margin-left: 1.5rem;
-}
-
-ul li,ol li {
-padding-left: 0;
-}
-
-code,kbd,pre,samp {
-font-size: 0.85rem;
-line-height: 1.5rem;
-}
-
-table {
-font-size: 1rem;
-line-height: 2.25rem;
-width: 100%;
-}
-
-thead {
-text-align: left;
-}
-
-h1,h2,h3,h4,h5,h6 {
-color: hsl(0,0%,20%);
-font-family: "Avenir Next", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
-font-weight: 600;
-}
-
-h1 {
-font-size: 1.728rem;
-line-height: 2.25rem;
-}
-
-h2 {
-font-size: 1.44rem;
-line-height: 2.25rem;
-}
-
-h3 {
-font-size: 1.2rem;
-line-height: 1.5rem;
-}
-
-h4 {
-font-size: 1.12924rem;
-line-height: 1.5rem;
-}
-
-h5 {
-font-size: 1.06266rem;
-line-height: 1.5rem;
-}
-
-h6 {
-font-size: 1rem;
-line-height: 1.5rem;
-}
-
-
-</style><style>.warning{color:#9f6000;background-color:#feefb3;padding:18px}.warning:before{content:'\26A0';margin-right:9px}.postcss-nav-example ul{margin:0;padding:0;list-style:none}.postcss-nav-example li{display:inline-block}.postcss-nav-example a{background:pink;border-radius:3px;display:block;margin-right:6px;padding:3px 9px;text-decoration:none}.the-postcss-class{text-decoration:underline}</style></head><body><div id="react-mount"><div><div><div style="display:flex;min-height:100vh;flex-direction:column;align-content:center;align-items:center;justify-content:center;padding:20px 0;border:8px solid #111;"><img src="/me.jpg" alt="Kyle Poole" style="max-height:200px;max-width:200px;border-radius:8px;border-color:#666;border-width:2px;"/><h1 style="margin:40px 0;">@kylpo</h1><a href="https://medium.com/@kylpo" style="margin:0 auto;text-decoration:none;color:#666;">blog</a><a href="https://github.com/kylpo" style="margin:0 auto;text-decoration:none;color:#666;">github</a><a href="https://twitter.com/kylpo" style="margin:0 auto;text-decoration:none;color:#666;">twitter</a><a href="https://www.linkedin.com/in/kylpo" style="margin:0 auto;text-decoration:none;color:#666;">linkedin</a><div style="height:40px;"></div><p style="text-align:center;margin:0 20px;"><b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native) at <a href="http://www.instrument.com/" style="text-decoration:none;font-weight:bold;color:#111;">Instrument</a></p></div><div style="position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none;animation:x 3s ease;animation-name:fadeIn-radium-animation-9ef1154e;"></div></div><style>@keyframes fadeIn-radium-animation-9ef1154e {
+white-space: normal;}textarea{overflow: auto;}[type="checkbox"], [type="radio"]{box-sizing: border-box;
+padding: 0;}[type="number"]::-webkit-inner-spin-button, [type="number"]::-webkit-outer-spin-button{height: auto;}[type="search"]{-webkit-appearance: textfield;
+outline-offset: -2px;}[type="search"]::-webkit-search-cancel-button, [type="search"]::-webkit-search-decoration{-webkit-appearance: none;}::-webkit-input-placeholder{color: inherit;
+opacity: 0.54;}::-webkit-file-upload-button{-webkit-appearance: button;
+font: inherit;}</style><div><div style="display:flex;min-height:100vh;flex-direction:column;align-content:center;align-items:center;justify-content:center;padding:20px 0;border:8px solid #111;"><img src="/1502a68854546f4f2b5d0c016a317974.jpg" alt="Kyle Poole" style="max-height:200px;max-width:200px;border-radius:8px;border-color:#666;border-width:2px;"/><h1 style="margin:40px 0;">@kylpo</h1><a href="https://medium.com/@kylpo" style="margin:0 auto;text-decoration:none;color:#666;">blog</a><a href="https://github.com/kylpo" style="margin:0 auto;text-decoration:none;color:#666;">github</a><a href="https://twitter.com/kylpo" style="margin:0 auto;text-decoration:none;color:#666;">twitter</a><a href="https://www.linkedin.com/in/kylpo" style="margin:0 auto;text-decoration:none;color:#666;">linkedin</a><div style="height:40px;"></div><p style="text-align:center;margin:0 20px;"><b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native) at <a href="http://www.instrument.com/" style="text-decoration:none;font-weight:bold;color:#111;">Instrument</a></p></div><div style="position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none;animation:x 3s ease;animation-name:fadeIn-radium-animation-9ef1154e;"></div></div><style>@keyframes fadeIn-radium-animation-9ef1154e {
 0%{opacity: 1;
 background-color: black;
 visibility: visible;}
 100%{opacity: 0;}
 }
-</style></div></div><script src="/bundle.js?t=1464627726052"></script></body></html>
+</style></div></div><script src="/bundle.js?t=1469416077261"></script></body></html>

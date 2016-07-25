@@ -1,8 +1,6 @@
 import React from 'react'
 import Radium from 'Radium'
-import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
-import { config } from 'config'
 
 const Spacer = () => (
   // <div style={{color: '#666', margin: '10px 0'}}>-</div>
@@ -13,7 +11,7 @@ const Link = props => (
   <a
     href={props.url}
     style={{
-      margin: '0 auto',
+      margin: '4px auto',
       textDecoration: 'none',
       color: '#666',
     }}
@@ -22,17 +20,17 @@ const Link = props => (
   </a>
 )
 
-class Main extends React.Component {
-
-  render () {
+@Radium
+export default class Home extends React.Component {
+  render() {
     return (
-      <DocumentTitle title={config.siteTitle}>
+      <DocumentTitle title='kylpo.com'>
         <div>
           <div
             style={styles.container}
           >
             <img
-              src={prefixLink('/me.jpg')}
+              src={require('images/me.jpg')}
               alt="Kyle Poole"
               style={{
                 maxHeight: 200,
@@ -47,10 +45,10 @@ class Main extends React.Component {
 
             {/* <Spacer /> */}
 
-            <Link url='https://medium.com/@kylpo' label='blog' />
-            <Link url='https://github.com/kylpo' label='github' />
-            <Link url='https://twitter.com/kylpo' label='twitter' />
-            <Link url='https://www.linkedin.com/in/kylpo' label='linkedin' />
+            <Link url='https://medium.com/@kylpo' label='Blog' />
+            <Link url='https://github.com/kylpo' label='Github' />
+            <Link url='https://twitter.com/kylpo' label='Twitter' />
+            <Link url='https://www.linkedin.com/in/kylpo' label='LinkedIn' />
 
             <Spacer />
 
@@ -67,8 +65,8 @@ class Main extends React.Component {
 }
 
 const fadeIn = Radium.keyframes({
-  '0%': {opacity: 1, backgroundColor: 'black', visibility: 'visible'},
-  '100%': {opacity: 0},
+  'from': {opacity: 1, backgroundColor: 'black', visibility: 'visible'},
+  'to': {opacity: 0},
 }, 'fadeIn')
 
 const styles = {
@@ -96,10 +94,8 @@ const styles = {
     visibility: 'hidden',
     pointerEvents: 'none',
     // Use a placeholder animation name in `animation`
-    animation: 'x 3s ease',
+    animation: 'x 3s ease-out',
     // Assign the result of `keyframes` to `animationName`
     animationName: fadeIn,
   },
 }
-
-export default Radium( Main )
