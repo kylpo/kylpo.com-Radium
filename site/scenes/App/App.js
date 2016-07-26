@@ -1,6 +1,7 @@
 import normalize from 'radium-normalize'
 
 import { StyleRoot, Style } from 'radium'
+import NavBar from './_/NavBar'
 
 export default class App extends React.Component {
   render() {

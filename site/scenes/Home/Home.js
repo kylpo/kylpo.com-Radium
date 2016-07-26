@@ -7,18 +7,27 @@ const Spacer = () => (
   <div style={{height: 40}} />
 )
 
-const Link = props => (
-  <a
-    href={props.url}
-    style={{
-      margin: '4px auto',
-      textDecoration: 'none',
-      color: '#666',
-    }}
-  >
-    {props.label}
-  </a>
-)
+@Radium
+class Link extends React.Component {
+  render() {
+    return (
+      <a
+        href={this.props.url}
+        style={{
+          margin: '4px auto',
+          textDecoration: 'none',
+          color: '#888',
+          ':hover': {
+            color: '#111',
+            textDecoration: 'underline',
+          }
+        }}
+      >
+        {this.props.label}
+      </a>
+    )
+  }
+}
 
 @Radium
 export default class Home extends React.Component {
@@ -29,32 +38,41 @@ export default class Home extends React.Component {
           <div
             style={styles.container}
           >
-            <img
+            {/*<img
               src={require('images/me.jpg')}
               alt="Kyle Poole"
               style={{
-                maxHeight: 200,
-                maxWidth: 200,
-                borderRadius: 8,
-                borderColor: '#666',
-                borderWidth: 2,
+              maxHeight: 200,
+              maxWidth: 200,
+              borderRadius: 8,
+              borderColor: '#666',
+              borderWidth: 2,
               }}
-            />
-
-            <h1 style={{margin: '40px 0'}}>@kylpo</h1>
-
-            {/* <Spacer /> */}
-
-            <Link url='https://medium.com/@kylpo' label='Blog' />
-            <Link url='https://github.com/kylpo' label='Github' />
-            <Link url='https://twitter.com/kylpo' label='Twitter' />
-            <Link url='https://www.linkedin.com/in/kylpo' label='LinkedIn' />
+              />
+            */}
+            <Text
+              tag='h1'
+              size={40}
+              fontFamily='Montserrat'
+              style={styles.title}
+              color='#111'
+            >
+              KYLPO
+            </Text>
 
             <Spacer />
 
-            <p style={{textAlign: 'center', margin: '0 20px'}}>
+            <Link url='https://medium.com/@kylpo' label='blog' />
+            <Link url='https://github.com/kylpo' label='github' />
+            <Link url='https://twitter.com/kylpo' label='twitter' />
+            <Link url='https://www.linkedin.com/in/kylpo' label='linkedIn' />
+
+            <Spacer />
+
+            <p style={{textAlign: 'center', margin: '0 20px', lineHeight: '40px'}}>
               <b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native) at <a href='http://www.instrument.com/' style={styles.textLink}>Instrument</a>
             </p>
+
 
           </div>
           <div style={styles.fade}/>
@@ -65,15 +83,29 @@ export default class Home extends React.Component {
 }
 
 const fadeIn = Radium.keyframes({
-  'from': {opacity: 1, backgroundColor: 'black', visibility: 'visible'},
-  'to': {opacity: 0},
+  '0%': {opacity: 1, backgroundColor: 'black', visibility: 'visible'},
+  '40%': {opacity: 1, backgroundColor: 'black', visibility: 'visible'},
+  '100%': {opacity: 0},
 }, 'fadeIn')
+
+
+const titleFadeIn = Radium.keyframes({
+  '0%': {color: 'black'},
+  '20%': {color: 'white'},
+  '30%': {color: 'white'},
+  // '40%': {color: 'white'},
+  '70%': {color: '#111'},
+  '100%': {color: '#111'},
+}, 'titleFadeIn')
 
 const styles = {
   textLink: {
     textDecoration: 'none',
     fontWeight: 'bold',
     color: '#111',
+    ':hover': {
+      textDecoration: 'underline',
+    }
   },
   container: {
     display: 'flex',
@@ -83,7 +115,14 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: '20px 0',
-    border: '8px solid #111',
+    border: '10px solid #111',
+  },
+  title: {
+    zIndex: 100,
+    // Use a placeholder animation name in `animation`
+    animation: 'x 4s ease-out',
+    // Assign the result of `keyframes` to `animationName`
+    animationName: titleFadeIn,
   },
   fade: {
     position: 'fixed',
@@ -94,7 +133,7 @@ const styles = {
     visibility: 'hidden',
     pointerEvents: 'none',
     // Use a placeholder animation name in `animation`
-    animation: 'x 3s ease-out',
+    animation: 'x 4s ease-out',
     // Assign the result of `keyframes` to `animationName`
     animationName: fadeIn,
   },

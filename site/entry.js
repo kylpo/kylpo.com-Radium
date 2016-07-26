@@ -41,7 +41,7 @@ class Html extends React.Component {
         scripts={[
           `/bundle.js?t=${new Date().getTime()}`,
         ]}
-        stylesheets={[{inline: inlineStyles}]}
+        stylesheets={[{inline: inlineStyles},'https://fonts.googleapis.com/css?family=Montserrat']}
       >
         {this.props.children}
       </HtmlDocument>
