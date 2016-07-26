@@ -17,6 +17,9 @@ class Link extends React.Component {
           margin: '4px auto',
           textDecoration: 'none',
           color: '#888',
+          // fontFamily: 'Unica One',
+          fontFamily: 'Vollkorn',
+          // fontFamily: 'Abel',
           ':hover': {
             color: '#111',
             textDecoration: 'underline',
@@ -63,7 +66,7 @@ export default class Home extends React.Component {
 
             <Spacer />
 
-            <p style={{textAlign: 'center', margin: '0 20px', lineHeight: '40px'}}>
+            <p style={{textAlign: 'center', margin: '0 20px', lineHeight: '40px', letterSpacing: '0.3px'}}>
               <b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native) at <a href='http://www.instrument.com/' style={styles.textLink}>Instrument</a>
             </p>
 
@@ -96,6 +99,7 @@ const styles = {
   textLink: {
     textDecoration: 'none',
     fontWeight: 'bold',
+    // fontFamily: 'Unica One',
     color: '#111',
     ':hover': {
       textDecoration: 'underline',
@@ -114,7 +118,8 @@ const styles = {
   title: {
     fontSize: 40,
     lineHeight: '40px',
-    fontFamily: 'Montserrat',
+    // fontFamily: 'Montserrat',
+          fontFamily: 'Unica One',
     color: '#111',
     zIndex: 100,
     // Use a placeholder animation name in `animation`

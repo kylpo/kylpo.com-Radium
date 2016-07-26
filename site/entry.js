@@ -43,7 +43,8 @@ class Html extends React.Component {
         ]}
         stylesheets={[
           {inline: inlineStyles},
-          'https://fonts.googleapis.com/css?family=Montserrat'
+          // 'https://fonts.googleapis.com/css?family=Montserrat|Unica+One|Vollkorn|Abel|Open+Sans|Lato'
+          'https://fonts.googleapis.com/css?family=Unica+One|Vollkorn'
           // 'https://fonts.googleapis.com/css?family=Fjord+One|Montserrat'
         ]}
       >
