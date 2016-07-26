@@ -4,7 +4,7 @@ import DocumentTitle from 'react-document-title'
 
 const Spacer = () => (
   // <div style={{color: '#666', margin: '10px 0'}}>-</div>
-  <div style={{height: 40}} />
+  <div style={{height: 30}} />
 )
 
 @Radium
@@ -50,15 +50,9 @@ export default class Home extends React.Component {
               }}
               />
             */}
-            <Text
-              tag='h1'
-              size={40}
-              fontFamily='Montserrat'
-              style={styles.title}
-              color='#111'
-            >
+            <h1 style={styles.title}>
               KYLPO
-            </Text>
+            </h1>
 
             <Spacer />
 
@@ -118,6 +112,10 @@ const styles = {
     border: '10px solid #111',
   },
   title: {
+    fontSize: 40,
+    lineHeight: '40px',
+    fontFamily: 'Montserrat',
+    color: '#111',
     zIndex: 100,
     // Use a placeholder animation name in `animation`
     animation: 'x 4s ease-out',

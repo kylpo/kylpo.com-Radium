@@ -18,7 +18,7 @@ const plugins = [
     Radium: 'radium',
     Block: 'kylpo-Block',
     Col: 'kylpo-Col',
-    Button: 'kylpo-Button',
+    // Button: 'kylpo-Button',
     BackgroundImage: 'kylpo-BackgroundImage',
     Row: 'kylpo-Row',
     Flex: 'kylpo-Flex',
@@ -27,7 +27,7 @@ const plugins = [
     InlineFlex: 'kylpo-InlineFlex',
     InlineCol: 'kylpo-InlineCol',
     InlineRow: 'kylpo-InlineRow',
-    Text: 'kylpo-Text',
+    // Text: 'kylpo-Text',
   }),
 
   new webpack.DefinePlugin({
