@@ -33,7 +33,7 @@ class Html extends React.Component {
   render() {
     return (
       <HtmlDocument
-        title='Site Title'
+        title='kylpo.com'
         metatags={[
           {name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1'},
           {httpEquiv: 'content-type', content: 'text/html; charset=utf-8'},
@@ -55,16 +55,16 @@ class Html extends React.Component {
 }
 
 // Client render (optional):
-if (typeof document !== 'undefined') {
-  ReactDOM.render(
-    <Router
-      history={browserHistory}
-      routes={routes}
-      render={applyRouterMiddleware(useScroll())}
-    />,
-    document.getElementById( 'app' ) // 'app' is default id of Html's wrapper
-  )
-}
+// if (typeof document !== 'undefined') {
+//   ReactDOM.render(
+//     <Router
+//       history={browserHistory}
+//       routes={routes}
+//       render={applyRouterMiddleware(useScroll())}
+//     />,
+//     document.getElementById( 'app' ) // 'app' is default id of Html's wrapper
+//   )
+// }
 
 // Exported static site renderer:
 export default (locals, callback) => {

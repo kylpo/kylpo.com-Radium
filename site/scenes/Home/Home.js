@@ -1,6 +1,5 @@
 import React from 'react'
 import Radium from 'Radium'
-import DocumentTitle from 'react-document-title'
 
 const Spacer = () => (
   // <div style={{color: '#666', margin: '10px 0'}}>-</div>
@@ -16,9 +15,10 @@ class Link extends React.Component {
         style={{
           margin: '4px auto',
           textDecoration: 'none',
-          color: '#888',
-          // fontFamily: 'Unica One',
-          fontFamily: 'Vollkorn',
+          color: '#777',
+          fontFamily: 'Unica One',
+          letterSpacing: '0.2px',
+    //       fontFamily: 'Vollkorn',
           // fontFamily: 'Abel',
           ':hover': {
             color: '#111',
@@ -36,7 +36,6 @@ class Link extends React.Component {
 export default class Home extends React.Component {
   render() {
     return (
-      <DocumentTitle title='kylpo.com'>
         <div>
           <div
             style={styles.container}
@@ -59,14 +58,14 @@ export default class Home extends React.Component {
 
             <Spacer />
 
-            <Link url='https://medium.com/@kylpo' label='blog' />
-            <Link url='https://github.com/kylpo' label='github' />
-            <Link url='https://twitter.com/kylpo' label='twitter' />
-            <Link url='https://www.linkedin.com/in/kylpo' label='linkedIn' />
+            <Link url='https://medium.com/@kylpo' label='BLOG' />
+            <Link url='https://github.com/kylpo' label='GITHUB' />
+            <Link url='https://twitter.com/kylpo' label='TWITTER' />
+            <Link url='https://www.linkedin.com/in/kylpo' label='LINKEDIN' />
 
             <Spacer />
 
-            <p style={{textAlign: 'center', margin: '0 20px', lineHeight: '40px', letterSpacing: '0.3px'}}>
+            <p style={{textAlign: 'center', margin: '16px 20px 0', lineHeight: '24px', letterSpacing: '0.3px'}}>
               <b>Kyle Poole</b> is a full stack web and mobile developer using React (+Native) at <a href='http://www.instrument.com/' style={styles.textLink}>Instrument</a>
             </p>
 
@@ -74,7 +73,6 @@ export default class Home extends React.Component {
           </div>
           <div style={styles.fade}/>
         </div>
-      </DocumentTitle>
     )
   }
 }
@@ -113,7 +111,7 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     padding: '20px 0',
-    border: '10px solid #111',
+    // border: '10px solid #111',
   },
   title: {
     fontSize: 40,
